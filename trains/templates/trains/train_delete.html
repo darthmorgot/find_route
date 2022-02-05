@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Travel - Удаление поезда{% endblock %}
+
+{% block content %}
+  <h1>Удаление поезда</h1>
+  <p>{{ city }}</p>
+  {% include 'form.html' with button_name='Удалить' %}
+{% endblock %}

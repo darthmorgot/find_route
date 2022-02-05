@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Список поездов</h1>
+  <div class="row">
+    <div class="col-md-8 mx-auto my-2">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Номер</th>
+          <th>Пункт отправления</th>
+          <th>Пункт назначения</th>
+          <th>Время в пути</th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+        </thead>
+      {% for train in page_obj %}
+        <tr>
+          <td>
+            <a href="{% url 'trains:detail' pk=train.pk %}">{{ train.name }}</a>
+          </td>
+          <td>{{ train.from_city }}</td>
+          <td>{{ train.to_city }}</td>
+          <td>{{ train.travel_time }}</td>
+          {% if user.is_authenticated %}
+          <td>
+            <a href="{% url 'trains:update' pk=train.pk %}" class="btn btn-primary">Редактировать</a>
+          </td>
+          <td>
+            <a href="{% url 'trains:delete' pk=train.pk %}" class="btn btn-danger">Удалить</a>
+          </td>
+          {% else %}
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          {% endif %}
+        </tr>
+      {% endfor %}
+      </table>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            {% if page_obj.has_previous %}
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+            {% endif %}
+          </li>
+          {% for page in page_obj.paginator.page_range %}
+          <li class="page-item {% if page == page_obj.number %}active{% endif %}">
+            <a class="page-link" href="?page={{ page }}">{{ page }}</a>
+          </li>
+          {% endfor %}
+          <li class="page-item">
+            {% if page_obj.has_next %}
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+            {% endif %}
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+{% endblock %}

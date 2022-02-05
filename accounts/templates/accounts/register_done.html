@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block title %}Travel - Регистрация{% endblock %}
+
+{% block content %}
+  <h1>Приветствуем {{ new_user.username }}</h1>
+  <p>Вы успешно зарегистрированы, можете <a href="{% url 'accounts:login' %}">войти</a></p>
+{% endblock %}

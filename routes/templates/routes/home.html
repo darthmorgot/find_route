@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Travel - Поиск маршрута{% endblock %}
+
+{% block content %}
+  <h1>Поиск маршрута</h1>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      {% if routes %}
+      <h3>Маршрут{% if routes|length != 1 %}ы{% endif %}  из {{ cities.from_city.name }} в {{ cities.to_city.name }}.</h3>
+      <br>
+      {% for route in routes %}
+      <form action="{% url 'add_route' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="from_city" value="{{ cities.from_city.pk }}">
+        <input type="hidden" name="to_city" value="{{ cities.to_city.pk }}">
+        <input type="hidden" name="total_time" value="{{ route.total_time }}">
+        <input type="hidden" name="trains" value="{% for train in route.trains %}{{ train.pk }},{% endfor %}">
+        <h5>Время в пути {{ route.total_time }}</h5>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Список поездов по данному маршруту</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for train in route.trains %}
+            <tr>
+              <th scope="row">{{ forloop.counter }}</th>
+              <td>{{ train }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <button type="submit" class="btn btn-success">Сохранить</button>
+      </form>
+      <br>
+      {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+  {% url 'find_routes' as action %}
+  {% include 'form.html' with button_name='Найти' %}
+{% endblock %}

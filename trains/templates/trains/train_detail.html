@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Travel - Поезд{% endblock %}
+
+{% block content %}
+  <h1>Поезд</h1>
+  <div class="row">
+    <div class="col-md">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Номер</th>
+          <th>Пункт отправления</th>
+          <th>Пункт назначения</th>
+          <th>Время в пути</th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tr>
+          <td>{{ train.name }}</td>
+          <td>{{ train.from_city }}</td>
+          <td>{{ train.to_city }}</td>
+          <td>{{ train.travel_time }}</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          {% comment %}
+          <td>
+            <a href="{% url 'trains:update' pk=train.pk %}" class="btn btn-primary">Редактировать</a>
+          </td>
+          <td>
+            <a href="{% url 'trains:delete' pk=train.pk %}" class="btn btn-danger">Удалить</a>
+          </td>
+          {% endcomment %}
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <a href="{% url 'trains:home' %}" class="btn btn-light">Назад к списку</a>
+    </div>
+  </div>
+{% endblock %}
