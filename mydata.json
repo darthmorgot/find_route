@@ -1,0 +1,267 @@
+[
+{
+  "model": "cities.city",
+  "pk": 2,
+  "fields": {
+    "name": "Владивосток"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 3,
+  "fields": {
+    "name": "Комсомольск-на-Амуре"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 4,
+  "fields": {
+    "name": "Биробиджан"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 5,
+  "fields": {
+    "name": "Благовещенск"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 6,
+  "fields": {
+    "name": "Спасск"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 8,
+  "fields": {
+    "name": "Советская гавань"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 9,
+  "fields": {
+    "name": "Николаевск-на-Амуре"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 11,
+  "fields": {
+    "name": "Хабаровск"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 13,
+  "fields": {
+    "name": "Уссурийск"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 15,
+  "fields": {
+    "name": "Бикин"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 16,
+  "fields": {
+    "name": "Южно-Сахалинск"
+  }
+},
+{
+  "model": "routes.route",
+  "pk": 3,
+  "fields": {
+    "name": "ХВ2",
+    "travel_times": 12,
+    "from_city": 11,
+    "to_city": 2,
+    "trains": [
+      2
+    ]
+  }
+},
+{
+  "model": "routes.route",
+  "pk": 4,
+  "fields": {
+    "name": "ХВ3",
+    "travel_times": 22,
+    "from_city": 11,
+    "to_city": 2,
+    "trains": [
+      13,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 2,
+  "fields": {
+    "name": "tr2",
+    "travel_time": 12,
+    "from_city": 11,
+    "to_city": 2
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 3,
+  "fields": {
+    "name": "tr3",
+    "travel_time": 11,
+    "from_city": 15,
+    "to_city": 13
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 4,
+  "fields": {
+    "name": "tr4",
+    "travel_time": 8,
+    "from_city": 15,
+    "to_city": 6
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 5,
+  "fields": {
+    "name": "tr1",
+    "travel_time": 10,
+    "from_city": 11,
+    "to_city": 15
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 6,
+  "fields": {
+    "name": "tr5",
+    "travel_time": 6,
+    "from_city": 11,
+    "to_city": 3
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 7,
+  "fields": {
+    "name": "tr6",
+    "travel_time": 6,
+    "from_city": 3,
+    "to_city": 11
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 8,
+  "fields": {
+    "name": "tr7",
+    "travel_time": 9,
+    "from_city": 11,
+    "to_city": 9
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 9,
+  "fields": {
+    "name": "tr8",
+    "travel_time": 21,
+    "from_city": 5,
+    "to_city": 11
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 10,
+  "fields": {
+    "name": "tr9",
+    "travel_time": 19,
+    "from_city": 11,
+    "to_city": 5
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 11,
+  "fields": {
+    "name": "tr10",
+    "travel_time": 15,
+    "from_city": 8,
+    "to_city": 11
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 12,
+  "fields": {
+    "name": "tr11",
+    "travel_time": 7,
+    "from_city": 11,
+    "to_city": 6
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 13,
+  "fields": {
+    "name": "tr12",
+    "travel_time": 4,
+    "from_city": 6,
+    "to_city": 2
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 14,
+  "fields": {
+    "name": "tr13",
+    "travel_time": 2,
+    "from_city": 11,
+    "to_city": 4
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 15,
+  "fields": {
+    "name": "tr14",
+    "travel_time": 3,
+    "from_city": 13,
+    "to_city": 2
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 16,
+  "fields": {
+    "name": "tr15",
+    "travel_time": 24,
+    "from_city": 2,
+    "to_city": 8
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 17,
+  "fields": {
+    "name": "tr16",
+    "travel_time": 48,
+    "from_city": 2,
+    "to_city": 16
+  }
+}
+]
