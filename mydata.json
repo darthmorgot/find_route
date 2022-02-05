@@ -3,84 +3,84 @@
   "model": "cities.city",
   "pk": 2,
   "fields": {
-    "name": "Владивосток"
+    "name": "Р’Р»Р°РґРёРІРѕСЃС‚РѕРє"
   }
 },
 {
   "model": "cities.city",
   "pk": 3,
   "fields": {
-    "name": "Комсомольск-на-Амуре"
+    "name": "РљРѕРјСЃРѕРјРѕР»СЊСЃРє-РЅР°-РђРјСѓСЂРµ"
   }
 },
 {
   "model": "cities.city",
   "pk": 4,
   "fields": {
-    "name": "Биробиджан"
+    "name": "Р‘РёСЂРѕР±РёРґР¶Р°РЅ"
   }
 },
 {
   "model": "cities.city",
   "pk": 5,
   "fields": {
-    "name": "Благовещенск"
+    "name": "Р‘Р»Р°РіРѕРІРµС‰РµРЅСЃРє"
   }
 },
 {
   "model": "cities.city",
   "pk": 6,
   "fields": {
-    "name": "Спасск"
+    "name": "РЎРїР°СЃСЃРє"
   }
 },
 {
   "model": "cities.city",
   "pk": 8,
   "fields": {
-    "name": "Советская гавань"
+    "name": "РЎРѕРІРµС‚СЃРєР°СЏ РіР°РІР°РЅСЊ"
   }
 },
 {
   "model": "cities.city",
   "pk": 9,
   "fields": {
-    "name": "Николаевск-на-Амуре"
+    "name": "РќРёРєРѕР»Р°РµРІСЃРє-РЅР°-РђРјСѓСЂРµ"
   }
 },
 {
   "model": "cities.city",
   "pk": 11,
   "fields": {
-    "name": "Хабаровск"
+    "name": "РҐР°Р±Р°СЂРѕРІСЃРє"
   }
 },
 {
   "model": "cities.city",
   "pk": 13,
   "fields": {
-    "name": "Уссурийск"
+    "name": "РЈСЃСЃСѓСЂРёР№СЃРє"
   }
 },
 {
   "model": "cities.city",
   "pk": 15,
   "fields": {
-    "name": "Бикин"
+    "name": "Р‘РёРєРёРЅ"
   }
 },
 {
   "model": "cities.city",
   "pk": 16,
   "fields": {
-    "name": "Южно-Сахалинск"
+    "name": "Р®Р¶РЅРѕ-РЎР°С…Р°Р»РёРЅСЃРє"
   }
 },
 {
   "model": "routes.route",
   "pk": 3,
   "fields": {
-    "name": "ХВ2",
+    "name": "РҐР’2",
     "travel_times": 12,
     "from_city": 11,
     "to_city": 2,
@@ -93,7 +93,7 @@
   "model": "routes.route",
   "pk": 4,
   "fields": {
-    "name": "ХВ3",
+    "name": "РҐР’3",
     "travel_times": 22,
     "from_city": 11,
     "to_city": 2,
