@@ -1,1 +1,2 @@
-# Учебный сайт на фреймворке Django.
+# Учебный сайт на фреймворке Django. \
+https://find-route-project.herokuapp.com
